@@ -1,0 +1,13 @@
+.sidenav__item {
+    @apply w-auto md:w-full flex justify-center md:justify-start items-center gap-3 bg-white sm:bg-background rounded p-2 my-1;
+}
+.sidenav__item > span {
+    @apply hidden lg:flex;
+}
+
+.sidenav__item--active {
+    @apply bg-white shadow;
+}
+.sidenav__item--active > span {
+    @apply text-success;
+}

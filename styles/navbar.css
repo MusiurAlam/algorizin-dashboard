@@ -1,0 +1,39 @@
+.nav__container {
+    @apply w-full flex justify-start sticky top-0 bg-white z-50 px-5 py-3;
+}
+
+.brand__name {
+    max-width: 30%;
+    width: 20%;
+    min-width: 10%;
+    cursor: pointer;
+
+    @apply flex items-center gap-2;
+}
+
+@media (max-width: 640px) {
+    .brand__name {
+        min-width: 40%;
+    }
+}
+
+.profile {
+    width: 100%;
+    @apply flex items-center justify-end lg:justify-between gap-3;
+}
+
+.profile__searchbar {
+    min-width: 30%;
+    @apply rounded-lg bg-background hidden lg:flex items-center justify-start gap-3 px-3 py-2 ml-3;
+}
+
+.profile__searchbar > input {
+    outline: none;
+    background-color: #00000000;
+    width: 100%;
+}
+
+.profile__options {
+    cursor: pointer;
+    @apply flex items-center justify-end gap-3;
+}
