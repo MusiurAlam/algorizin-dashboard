@@ -13,7 +13,7 @@
 }
 
 #inventoryTable th {
-    @apply py-4 font-medium;
+    @apply py-4 font-semibold;
 }
 
 #inventoryTable th:first-child,

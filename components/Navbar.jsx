@@ -20,7 +20,7 @@ const Navbar = () => {
     <div className="nav__container">
       {/* left div  */}
       <div className="brand__name">
-        <span>Starbucks</span>
+        <span className="font-semibold">Starbucks</span>
         <Image
           src="/static/icons/chevron__down.svg"
           alt="chevron__down"
