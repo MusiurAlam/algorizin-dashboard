@@ -47,8 +47,10 @@ const NavItems = [
 
 //main_function
 const SideNavbar = () => {
+  // tab management state 
   const [activeTab, setActiveTab] = useState("Inventory");
 
+  // tab management function
   const handleActiveTabSwitching = (tab) => {
     setActiveTab(tab);
   };
@@ -65,12 +67,14 @@ const SideNavbar = () => {
             onClick={() => handleActiveTabSwitching(item__name)}
             role="button"
           >
+            {/* tab icon  */}
             <Image
               src={activeTab === item__name ? colored__image__src : image__src}
               alt={item__name}
               width="20"
               height="20"
             />
+            {/* tab name  */}
             <span>{item__name}</span>
           </div>
         );

@@ -8,9 +8,12 @@
     width: 100%;
 }
 
-#inventoryTable td,
+#inventoryTable td {
+    @apply py-4 font-normal;
+}
+
 #inventoryTable th {
-    @apply py-4;
+    @apply py-4 font-medium;
 }
 
 #inventoryTable th:first-child,

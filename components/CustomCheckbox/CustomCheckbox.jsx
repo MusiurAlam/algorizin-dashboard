@@ -4,8 +4,8 @@
  * Title: Top Navigation Bar Component
  * Author: Musiur Alam Opu
  *
- * Description: Using this we can navigate all the page we may have
- * in our web application.
+ * Description: Reusable custom Checkbox
+ * for row selection
  *
  * Date: 27th April, 2022
  *
@@ -25,7 +25,9 @@ const CustomCheckbox = ({ props }) => {
         className="checkbox__input"
         onChange={handleOnChangeCheckbox}
       />
-      <div className="checkbox__checkbox"></div>
+      <div className="checkbox__checkbox">
+        {/* will have an virtual element using after(seudo element) */}
+      </div>
     </label>
   );
 };

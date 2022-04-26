@@ -13,6 +13,7 @@
  *
  */
 
+//dependencies
 import TableData from "../../public/static/json-data/table-data.json";
 import Table from "../Table";
 import SideNavbar from "./SideNavbar";
@@ -21,17 +22,21 @@ import SideNavbar from "./SideNavbar";
 const Dashboard = () => {
   return (
     <div className="dashboard__container">
-      <div className="side__navbar padding__container">
+      {/* dashboard side bar section */}
+      <section className="side__navbar padding__container">
         <SideNavbar />
-      </div>
-      <div className="dashboard__table">
+      </section>
+
+      {/* dashboard table section */}
+      <section className="dashboard__table">
         <div className="table__heading padding__container">
           <h3>Inventory</h3>
         </div>
         <div className="padding__container">
+          {/* custom reuseable table component  */}
           <Table props={TableData}/>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

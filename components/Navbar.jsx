@@ -11,6 +11,7 @@
  *
  */
 
+//dependencies
 import Image from "next/image";
 
 //main_function
@@ -19,7 +20,7 @@ const Navbar = () => {
     <div className="nav__container">
       {/* left div  */}
       <div className="brand__name">
-        <span>Starbuks</span>
+        <span>Starbucks</span>
         <Image
           src="/static/icons/chevron__down.svg"
           alt="chevron__down"
@@ -30,6 +31,7 @@ const Navbar = () => {
 
       {/* right div  */}
       <div className="profile">
+        {/* search bar  */}
         <div className="profile__searchbar">
           <Image
             src="/static/icons/search.svg"
@@ -39,20 +41,28 @@ const Navbar = () => {
           />
           <input name="search__item" placeholder="Search"/>
         </div>
+
+        {/* profile parts */}
         <div className="profile__options">
+          {/* bell icon  */}
           <Image
             src="/static/icons/bell.svg"
             alt="chevron__down"
             width="17"
             height="17"
           />
+
+          {/* avatar  */}
           <Image
             src="/static/images/avatar.svg"
             alt="chevron__down"
             width="30"
             height="30"
           />
+          {/* user name  */}
           <span>John Doe</span>
+
+          {/* chevron down icon  */}
           <Image
             src="/static/icons/chevron__down.svg"
             alt="chevron__down"

@@ -107,7 +107,7 @@ const Table = ({ props }) => {
                           {tHeading === "Quantity" ? (
                             <>
                               <span className="font-bold">
-                                {QuantityNotToBold}
+                                {QuantityToBold}
                               </span>
                               /{QuantityNotToBold}
                             </>
