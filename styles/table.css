@@ -26,7 +26,7 @@
 }
 
 #inventoryTable tr:hover {
-    @apply bg-green-light;
+    @apply bg-white sm:bg-green-light;
 }
 
 #inventoryTable th {
