@@ -51,6 +51,7 @@
     width: 100%;
 }
 
+/* this class is used in table.jsx  */
 .table__heading {
     border-bottom: 1px solid #e4e4e4;
 }

@@ -1,6 +1,6 @@
 /**
  *
- * Project: Alorizin (React Developer Recruiting Task)
+ * Project: Algorizin (React Developer Recruiting Task)
  * Title: Top Navigation Bar Component
  * Author: Musiur Alam Opu
  *
@@ -21,6 +21,7 @@ const Navbar = () => {
       {/* left div  */}
       <div className="brand__name">
         <span className="font-semibold">Starbucks</span>
+        {/* chevron__down icon  */}
         <Image
           src="/static/icons/chevron__down.svg"
           alt="chevron__down"

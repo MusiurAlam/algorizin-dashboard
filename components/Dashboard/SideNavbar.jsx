@@ -1,12 +1,11 @@
 /**
  *
- * Project: Alorizin (React Developer Recruiting Task)
- * Title: Table Component
+ * Project: Algorizin (React Developer Recruiting Task)
+ * Title: Side Navbar Component
  * Author: Musiur Alam Opu
  *
- * Description: This is a reuseable table which takes props
- * and render them with styling.
- * It will have many rows and columns and pagination functionality
+ * Description: We can navigate Dashboard, inventory,
+ * documents and setting options
  *
  *
  * Date: 26th April, 2022

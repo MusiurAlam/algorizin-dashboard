@@ -1,6 +1,6 @@
 /**
  * 
- * Project: Alorizin (React Developer Recruiting Task)
+ * Project: Algorizin (React Developer Recruiting Task)
  * Title: Layout Component 
  * Author: Musiur Alam Opu
  * 

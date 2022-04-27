@@ -1,11 +1,11 @@
 /**
  *
- * Project: Alorizin (React Developer Recruiting Task)
- * Title: Top Navigation Bar Component
+ * Project: Algorizin (React Developer Recruiting Task)
+ * Title: Custom checkbox
  * Author: Musiur Alam Opu
  *
  * Description: Reusable custom Checkbox
- * for row selection
+ * for row selection and made with JSX, CSS and Tailwind CSS
  *
  * Date: 27th April, 2022
  *

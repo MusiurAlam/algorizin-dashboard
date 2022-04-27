@@ -1,6 +1,6 @@
 /**
  *
- * Project: Alorizin (React Developer Recruiting Task)
+ * Project: Algorizin (React Developer Recruiting Task)
  * Title: Table Component
  * Author: Musiur Alam Opu
  *
@@ -41,37 +41,45 @@ const Table = ({ props }) => {
           <tr className="border-background table__heading">
             {tableHeading.map((thData, i) => {
               const { id, tHeading } = thData;
-              const headingIdentity = "heading";
               return (
                 <Fragment key={id}>
-                  {i === 0 ? (
-                    <th className="text-left">
-                      <CustomCheckbox props={headingIdentity} />
-                    </th>
-                  ) : (
-                    <th className={`${i < 5 ? "text-left" : "text-right"}`}>
-                      <span>{tHeading}</span>
-                      {tHeading === "Amount" || tHeading === "Title" ? (
-                        <span className="pl-2">
-                          <Image
-                            src="/static/icons/up__down__arrow.svg"
-                            alt="chevron__arrow__down"
-                            width="15"
-                            height="15"
-                          />
-                        </span>
-                      ) : tHeading === "Date updated" ? (
-                        <span className="pl-2">
-                          <Image
-                            src="/static/icons/down__arrow.svg"
-                            alt=""
-                            width="15"
-                            height="15"
-                          />
-                        </span>
-                      ) : null}
-                    </th>
-                  )}
+                  {
+                    // showing checkbox for index 0 else th
+                    i === 0 ? (
+                      <th className="text-left">
+                        <CustomCheckbox props={"heading"} />
+                      </th>
+                    ) : (
+                      //this ternery in th will align th text according to the UI design
+                      <th className={`${i < 5 ? "text-left" : "text-right"}`}>
+                        <span>{tHeading}</span>
+                        {
+                          // showing up__down__arrow for th: Amount and Title
+                          tHeading === "Amount" || tHeading === "Title" ? (
+                            <span className="pl-2">
+                              <Image
+                                src="/static/icons/up__down__arrow.svg"
+                                alt="chevron__arrow__down"
+                                width="15"
+                                height="15"
+                              />
+                            </span>
+                          ) : // showing down__arrow for th: Date update
+                          tHeading === "Date updated" ? (
+                            <span className="pl-2">
+                              <Image
+                                src="/static/icons/down__arrow.svg"
+                                alt=""
+                                width="15"
+                                height="15"
+                              />
+                            </span>
+                          ) : // else showing no icon with th
+                          null
+                        }
+                      </th>
+                    )
+                  }
                 </Fragment>
               );
             })}
@@ -82,10 +90,12 @@ const Table = ({ props }) => {
           {tableRows.map((tRow) => {
             const { id, rowData, rowNumber } = tRow;
             return (
+              // table rows
               <tr key={id}>
                 {rowData.map((tdData, i) => {
                   const { id, td, tHeading } = tdData;
-                  const rowIdentity = `row${rowNumber}`;
+
+                  const rowIdentity = `row${rowNumber}`; //making unique id for checkboxs
 
                   // quantity highlighting
                   let QuantityToBold = 0;
@@ -97,42 +107,51 @@ const Table = ({ props }) => {
                   }
 
                   return (
+                    // row items as td
                     <Fragment key={id}>
-                      {i === 0 ? (
-                        <td className={i < 5 ? "text-left" : "text-right"}>
-                          <CustomCheckbox props={rowIdentity} />
-                        </td>
-                      ) : (
-                        <td className={i < 5 ? "text-left" : "text-right"}>
-                          {tHeading === "Quantity" ? (
-                            <>
-                              <span className="font-bold">
-                                {QuantityToBold}
-                              </span>
-                              /{QuantityNotToBold}
-                            </>
-                          ) : (
-                            <>
-                              {tHeading === "Status" ? (
-                                <div className="flex items-center gap-3">
-                                  <span className="hidden sm:flex">{td}</span>
-                                  <div
-                                    className={`w-2 h-2 rounded-full ${
-                                      td === "Out of stock"
-                                        ? "bg-red"
-                                        : td === "In progress"
-                                        ? "bg-orange"
-                                        : "bg-success"
-                                    }`}
-                                  ></div>
-                                </div>
-                              ) : (
-                                td
-                              )}
-                            </>
-                          )}
-                        </td>
-                      )}
+                      {
+                        // showing checkbox for index 0 else td
+                        i === 0 ? (
+                          <td className={i < 5 ? "text-left" : "text-right"}>
+                            <CustomCheckbox props={rowIdentity} />
+                          </td>
+                        ) : (
+                          <td className={i < 5 ? "text-left" : "text-right"}>
+                            {tHeading === "Quantity" ? (
+                              <>
+                                <span className="font-bold">
+                                  {QuantityToBold}
+                                </span>
+                                /{QuantityNotToBold}
+                              </>
+                            ) : (
+                              <>
+                                {
+                                  //showing dotted status (Red: out of stock, Orange: in progress, Green: alright)
+                                  tHeading === "Status" ? (
+                                    <div className="flex items-center gap-3">
+                                      <span className="hidden sm:flex">
+                                        {td}
+                                      </span>
+                                      <div
+                                        className={`w-2 h-2 rounded-full ${
+                                          td === "Out of stock"
+                                            ? "bg-red"
+                                            : td === "In progress"
+                                            ? "bg-orange"
+                                            : "bg-success"
+                                        }`}
+                                      ></div>
+                                    </div>
+                                  ) : (
+                                    td // else showing td
+                                  )
+                                }
+                              </>
+                            )}
+                          </td>
+                        )
+                      }
                     </Fragment>
                   );
                 })}
@@ -141,7 +160,9 @@ const Table = ({ props }) => {
           })}
         </tbody>
       </table>
+      {/* navigation section at footer */}
       <section className="pagination__bar">
+        {/* items number per view  */}
         <div className="pagination__bar--left">
           <div className="pagination__navigators">
             <span>10 pages per view</span>
@@ -154,6 +175,7 @@ const Table = ({ props }) => {
           </div>
         </div>
         <div className="pagination__bar--right">
+          {/* direct navigate a page  */}
           <div className="pagination__navigators">
             <span>Page 1 of 5</span>
             <Image
@@ -163,6 +185,7 @@ const Table = ({ props }) => {
               height="15"
             />
           </div>
+          {/* previous items btn  */}
           <div className="pagination__navigators">
             <Image
               src="/static/icons/chevron__light__left.svg"
@@ -171,6 +194,7 @@ const Table = ({ props }) => {
               height="15"
             />
           </div>
+          {/* next items btn  */}
           <div className="pagination__navigators">
             <Image
               src="/static/icons/chevron__light__right.svg"

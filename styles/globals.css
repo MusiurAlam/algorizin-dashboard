@@ -4,11 +4,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -18,6 +13,11 @@ a {
   transition: 0.3s ease-in-out;
 
   @apply text-black font-normal md:font-medium;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .padding__container {

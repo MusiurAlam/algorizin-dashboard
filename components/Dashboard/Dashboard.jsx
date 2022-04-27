@@ -1,12 +1,11 @@
 /**
  *
- * Project: Alorizin (React Developer Recruiting Task)
- * Title: Table Component
+ * Project: Algorizin (React Developer Recruiting Task)
+ * Title: Dashboard Component
  * Author: Musiur Alam Opu
  *
- * Description: This is a reuseable table which takes props
- * and render them with styling.
- * It will have many rows and columns and pagination functionality
+ * Description: This will be the main component used in
+ * index.js or, Home page
  *
  *
  * Date: 26th April, 2022
