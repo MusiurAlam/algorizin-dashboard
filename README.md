@@ -7,8 +7,10 @@
 <br>
 
 
-Project Git Repository link: 
+Project Github Repository link: 
 `https://github.com/MusiurAlam/algorizin-dashboard`
+
+Visit application: `https://algorizin-dasboard.vercel.app`
 
 
 Install the project in your local machine:
